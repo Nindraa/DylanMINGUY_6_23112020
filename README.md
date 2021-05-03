@@ -1,9 +1,44 @@
-## Piquante
+# Projet 6 #
+## Installation NODE.JS ##
+Télécharger node.js a cette adresse : https://nodejs.org/en/ et installez le.
+Cela va installer node.js ainsi que NPM.
 
-Le projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
+Clonez ce "repository".
 
-Pour faire fonctionner le projet, vous devez installer node-sass à part.
+Dans votre éditeur, tapez la commande `npm install` depuis le repertoire du dossier.
 
-## Development server
+Ensuite executer la commande `node server` pour vous connecter au serveur.
 
-Démarrer `ng serve` pour avoir accès au serveur de développement. Rendez-vous sur `http://localhost:4200/`. L'application va se recharger automatiquement si vous modifiez un fichier source.
+## Installation ANGULAR ##
+
+Dans votre éditeur, tapez la commande `npm install -g @angular/cli` depuis le repertoire du dossier.
+
+## Installation de node-sass à part ##
+
+Desinstaller node-sass : `npm uninstall node-sass`
+
+Installer sass : `npm install -g` sass et ensuite :
+
+## Installation EXPRESS ##
+
+`npm install --save express`
+
+## Installation MONGOOSE ##
+
+`npm install --save mongoose`
+
+## Installation plugin MONGOOSE-UNIQUE-VALIDATOR ##
+
+`npm install --save mongoose-unique-validator`
+
+## Installation cryptage BCRYPT ##
+
+`npm install --save bcrypt`
+
+## Installation JSONWEBTOKEN ##
+
+`npm install --save jsonwebtoken`
+
+## Installation MULTER ##
+
+`npm install --save multer`
