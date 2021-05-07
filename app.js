@@ -5,7 +5,7 @@ const path = require("path");
 const sauceRoutes = require("./routes/sauce");
 const userRoutes = require("./routes/user");
 
-mongoose.connect("mongodb+srv://Nindraa:Ruby01012020.@cluster0.14t6w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://Nindraa2:ModifRssOnly@cluster0.14t6w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     { useNewUrlParser: true,
     useUnifiedTopology: true })
     .then (() => console.log("Connexion a MongoDB réussie !"))
