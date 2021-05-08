@@ -5,6 +5,10 @@ const path = require("path");
 const sauceRoutes = require("./routes/sauce");
 const userRoutes = require("./routes/user");
 
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+
 mongoose.connect("mongodb+srv://Nindraa2:ModifRssOnly@cluster0.14t6w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     { useNewUrlParser: true,
     useUnifiedTopology: true })
@@ -19,6 +23,7 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
     next();
 });
+
 
 app.use(express.json());
 
