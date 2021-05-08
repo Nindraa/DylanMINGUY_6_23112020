@@ -19,27 +19,27 @@ Installer sass : `npm install -g sass`
 
 ## Installation EXPRESS ##
 
-Executez la commande : `npm install --save express` pour installez Express.
+Executez la commande : `npm install --save express` pour installez Express, depuis le repertoire du dossier.
 
 ## Installation MONGOOSE ##
 
-Executez la commande : `npm install --save mongoose` pour installez Mongoose.
+Executez la commande : `npm install --save mongoose` pour installez Mongoose, depuis le repertoire du dossier.
 
 ## Installation plugin MONGOOSE-UNIQUE-VALIDATOR ##
 
-Executez la commande : `npm install --save mongoose-unique-validator` pour installez le plugin Mongoose unique Validator.
+Executez la commande : `npm install --save mongoose-unique-validator` pour installez le plugin Mongoose unique Validator, depuis le repertoire du dossier.
 
 ## Installation cryptage BCRYPT ##
 
-Executez la commande :`npm install --save bcrypt` pour installer Bcrypt.
+Executez la commande :`npm install --save bcrypt` pour installer Bcrypt, depuis le repertoire du dossier.
 
 ## Installation JSONWEBTOKEN ##
 
-Executez la commande : `npm install --save jsonwebtoken` pour installer Json Web Token.
+Executez la commande : `npm install --save jsonwebtoken` pour installer Json Web Token, depuis le repertoire du dossier.
 
 ## Installation MULTER ##
 
-Executez la commande : `npm install --save multer` pour installer Multer.
+Executez la commande : `npm install --save multer` pour installer Multer, depuis le repertoire du dossier.
 
 ## Lancer le front-end ANGULAR ##
 
