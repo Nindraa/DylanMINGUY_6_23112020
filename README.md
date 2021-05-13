@@ -53,3 +53,8 @@ Dans une nouvelle fenêtre du terminal, executez `node server` pour vous connect
 
 Vous pouvez maintenant accéder au site via l'url : `http://localhost:4200`.
 
+## Installation de DOTENV ##
+
+Exexcutez la commande `npm install dotenv`
+
+
