@@ -25,21 +25,6 @@ app.use((req, res, next) => {
     next();
 });
 
-var mongoMask = require('mongo-mask')
-
-const map =
-  { id: '_id' }
-
-app.get('/api', (req, res, next) => {
-  const fields = req.query.fields ? mongoMask(req.query.fields, { map }) : null
-  mongoCollection.findOne({}, fields, (err, doc) => {
-    if (err) return next(err)
-    doc.id = doc._id
-    delete doc._id
-    res.json(doc)
-  })
-});
-
 
 app.use(express.json());
 

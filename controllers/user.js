@@ -1,23 +1,28 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
+var Buffer = require('buffer/').Buffer;
 
 exports.signup = (req, res, next) => {
+    let email = Buffer.from(req.body.email, "utf8");
+    let emailEncoded = email.toString("base64");
     bcrypt.hash(req.body.password, 10)
     .then(hash => {
         const user = new User({
-            email: req.body.email,
+            email: emailEncoded,
             password: hash
         });
         user.save()
         .then(() => res.status(201).json({ message: "Nouvel utilisateur crée !" }))
         .catch(error => res.status(400).json({ error }));
     })
-    .catch(error => res.status(500).json({ error }));
+    .catch(error => res.status(500).json({ error }))
 };
 
 exports.login = (req, res, next) => {
-    User.findOne({ email: req.body.email })
+    let email = Buffer.from(req.body.email, "utf8");
+    let emailEncoded = email.toString("base64");
+    User.findOne({ email: emailEncoded})
     .then(user => {
         if (!user) {
             res.status(401).json({ error: "Utilisateur introuvable" })

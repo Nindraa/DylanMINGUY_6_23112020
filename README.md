@@ -55,6 +55,9 @@ Vous pouvez maintenant accéder au site via l'url : `http://localhost:4200`.
 
 ## Installation de DOTENV ##
 
-Exexcutez la commande `npm install dotenv`
+Exexcutez la commande `npm install dotenv`.
 
+## Installation de BUFFER ##
+
+Executez la commande `npm install buffer` pour installer le plugin BUFFER.
 
