@@ -61,3 +61,9 @@ Exexcutez la commande `npm install dotenv`.
 
 Executez la commande `npm install buffer` pour installer le plugin BUFFER.
 
+## Fichier .env ##
+
+Pour des raisons de sécurité, vous devez créer un fichier .env dans le dossier source.
+
+Dans ce fichier, vous devez coller ce qui ce trouve dans le fichier `.env.example` en remplaçant les données `userDB` et `passwordDB` par celle envoyé par mail.
+
