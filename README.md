@@ -41,18 +41,6 @@ Executez la commande : `npm install --save jsonwebtoken` pour installer Json Web
 
 Executez la commande : `npm install --save multer` pour installer Multer, depuis le repertoire du dossier.
 
-## Lancer le front-end ANGULAR ##
-
-Executez la commande `ng serve`.
-
-Veillez à garder un fenetre du terminal ouverte et connecté au serveur front-end.
-
-## Lancer le serveur NODE.JS ##
-
-Dans une nouvelle fenêtre du terminal, executez `node server` pour vous connectez au serveur back-end.
-
-Vous pouvez maintenant accéder au site via l'url : `http://localhost:4200`.
-
 ## Installation de DOTENV ##
 
 Exexcutez la commande `npm install dotenv`.
@@ -61,9 +49,27 @@ Exexcutez la commande `npm install dotenv`.
 
 Executez la commande `npm install buffer` pour installer le plugin BUFFER.
 
+
+
+## Lancer le front-end ANGULAR ##
+
+Executez la commande `ng serve`.
+
+Veillez à garder un fenetre du terminal ouverte et connecté au serveur front-end.
+
+
 ## Fichier .env ##
 
 Pour des raisons de sécurité, vous devez créer un fichier .env dans le dossier source.
 
 Dans ce fichier, vous devez coller ce qui ce trouve dans le fichier `.env.example` en remplaçant les données `userDB` et `passwordDB` par celle envoyé par mail.
+
+
+## Lancer le serveur NODE.JS ##
+
+Dans une nouvelle fenêtre du terminal, executez `node server` pour vous connectez au serveur back-end.
+
+Vous pouvez maintenant accéder au site via l'url : `http://localhost:4200`.
+
+
 
