@@ -29,27 +29,32 @@ export class SignupComponent implements OnInit {
     this.loading = true;
     const email = this.signupForm.get('email').value;
     const password = this.signupForm.get('password').value;
-    this.auth.createUser(email, password).then(
-      (response: { message: string }) => {
-        console.log(response.message);
-        this.auth.loginUser(email, password).then(
-          () => {
-            this.loading = false;
-            this.router.navigate(['/sauces']);
-          }
-        ).catch(
-          (error) => {
-            this.loading = false;
-            console.error(error);
-            this.errorMsg = error.message;
-          }
-        );
-      }
-    ).catch((error) => {
-        this.loading = false;
-        console.error(error);
-        this.errorMsg = error.message;
-    });
+    const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    if (regexPassword.test(password) == false) {
+      alert('Votre mot de passe doit contenir 8 caractères minimum, 1 lettre majuscule, 1 lettre minuscule et 1 nombre.')
+      this.loading = false;
+    } else {
+      this.auth.createUser(email, password).then(
+        (response: { message: string }) => {
+          console.log(response.message);
+          this.auth.loginUser(email, password).then(
+            () => {
+              this.loading = false;
+              this.router.navigate(['/sauces']);
+            }
+          ).catch(
+            (error) => {
+              this.loading = false;
+              console.error(error);
+              this.errorMsg = error.message;
+            }
+          );
+        }
+      ).catch((error) => {
+          this.loading = false;
+          console.error(error);
+          this.errorMsg = error.message;
+      });
+    }
   }
-
 }

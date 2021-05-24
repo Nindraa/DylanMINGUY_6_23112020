@@ -1,28 +1,21 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
-var Buffer = require('buffer/').Buffer;
 
-exports.signup = (req, res, next) => {
-    let email = Buffer.from(req.body.email, "utf8");
-    let emailEncoded = email.toString("base64");
-    bcrypt.hash(req.body.password, 10)
-    .then(hash => {
-        const user = new User({
-            email: emailEncoded,
-            password: hash
-        });
-        user.save()
-        .then(() => res.status(201).json({ message: "Nouvel utilisateur crée !" }))
-        .catch(error => res.status(400).json({ error }));
+exports.signup = async (req, res, next) => {
+    let passwordHashed = await bcrypt.hash(req.body.password, 10);
+    const user = new User({
+        email: req.body.email,
+        password: passwordHashed
     })
-    .catch(error => res.status(500).json({ error }))
+    console.log(user);
+    user.save()
+    .then (()=> res.status(201).json({ message: "Utilisateur crée !"}))
+    .catch(error => res.status(500).json({ error }));
 };
 
-exports.login = (req, res, next) => {
-    let email = Buffer.from(req.body.email, "utf8");
-    let emailEncoded = email.toString("base64");
-    User.findOne({ email: emailEncoded})
+exports.login = async (req, res, next) => {
+    User.findOne({ email: req.body.email })
     .then(user => {
         if (!user) {
             res.status(401).json({ error: "Utilisateur introuvable" })
@@ -36,7 +29,7 @@ exports.login = (req, res, next) => {
                 userId: user._id,
                 token: jwt.sign(
                     {userId: user._id},
-                    "NEW_RANDOM_TOKEN",
+                    process.env.JWT_SECRET_KEY,
                     { expiresIn: "24h"},
                 )
             })

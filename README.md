@@ -45,11 +45,6 @@ Executez la commande : `npm install --save multer` pour installer Multer, depuis
 
 Exexcutez la commande `npm install dotenv`.
 
-## Installation de BUFFER ##
-
-Executez la commande `npm install buffer` pour installer le plugin BUFFER.
-
-
 
 ## Lancer le front-end ANGULAR ##
 
@@ -63,6 +58,7 @@ Veillez à garder un fenetre du terminal ouverte et connecté au serveur front-e
 Pour des raisons de sécurité, vous devez créer un fichier .env dans le dossier source.
 
 Dans ce fichier, vous devez coller ce qui ce trouve dans le fichier `.env.example` en remplaçant les données `userDB` et `passwordDB` par celle envoyé par mail.
+Vous devrez aussi coller la clé token aléatoire envoye par mail.
 
 
 ## Lancer le serveur NODE.JS ##
